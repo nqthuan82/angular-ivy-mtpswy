@@ -33,6 +33,17 @@ export class AppComponent implements OnInit {
           e => {
             if (!e.data || !e.data.eventName) return;
             console.log("PLAYER-EVENT", e.data);
+            switch (e.data.eventName) {
+              case "pause":
+                this.paused = true;
+                break;
+              case "play":
+                this.paused = false;
+                break;
+              case "muted":
+                console.log("muted");
+                break;
+            }
           },
           false
         );
