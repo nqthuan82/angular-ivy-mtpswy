@@ -1,0 +1,39 @@
+<my-app>loading</my-app>
+
+<!-- <iframe src="https://iframe.videodelivery.net/5d7086ca3594249dc70538d60da8202c" style="border: none;" height="720"
+	width="1280" allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;" allowfullscreen="true"
+	id="stream-player1"></iframe>
+
+<button id="my_click_to_play">CLICK ME</button>
+<script src="https://embed.videodelivery.net/embed/sdk.latest.js"></script>
+
+<!-- Your JavaScript code below-->
+<!--script>
+	const player = Stream(document.getElementById('stream-player1'));
+  player.addEventListener('play', () => {
+    console.log('playing!')
+  })
+  const btn = document.getElementById('my_click_to_play').addEventListener("click", function(e){
+    console.log("click me ...");
+    const elements = document.getElementsByTagName('iframe');
+    var innerDoc = elements[0];
+    console.log(innerDoc);
+    var elmnt = elements[0].contentWindow.document.getElementsByTagName("video")[0];
+    //console.log("video ...",elmnt);
+    for(var x = 0; x < elements.length; x++) {
+    // ignore anything which is not an <img>
+    if(elements[x].nodeName != "IMG") {
+       continue;
+    }
+
+    elements[x].addEventListener("click",function(){
+      console.log("click on IFRAME");
+      // do something when element is clicked
+      this.style.backgroundColor = 'red'; // change element bgcolor to red
+
+    },false);
+}
+    console.log("test ...",elements);
+  });
+
+</script> -->

@@ -1,0 +1,28 @@
+<!-- <div class="p-4" style="max-width:960px; margin:0 auto; display:block">
+	<cloudflare-stream [controls]="true" [loop]="true" [muted]="enableMute" [preload]="true" (play)="test($event)"
+		src="5d7086ca3594249dc70538d60da8202c"></cloudflare-stream>
+</div> -->
+
+<iframe src="https://iframe.videodelivery.net/5d7086ca3594249dc70538d60da8202c" style="border: none;" height="360"
+	width="640" allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;" allowfullscreen="true"
+	id="stream-player">
+</iframe>
+
+<div class="container text-center">
+	<div class="btn-group" role="group">
+		<button
+      type="button"
+      (click)="mute()"
+      class="btn btn-outline-dark btn-sm"
+    >
+      {{enableMute ? 'Mute' : 'Unmute'}}
+    </button>
+		<button
+      type="button"
+      (click)="togglePaused()"
+      class="btn btn-outline-dark btn-sm"
+    >
+      {{paused ? 'Play' : 'Pause'}}
+    </button>
+	</div>
+</div>
