@@ -27,6 +27,15 @@ export class AppComponent implements OnInit {
       try {
         console.log(x);
         this.player = Stream(document.getElementById("stream-player"));
+        // Listen event from player
+        window.addEventListener(
+          "message",
+          e => {
+            if (!e.data || !e.data.eventName) return;
+            console.log("PLAYER-EVENT", e.data);
+          },
+          false
+        );
         console.log("SUCCEED", this.player);
       } catch {
         console.log("FAILED");
